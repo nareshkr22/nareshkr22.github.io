@@ -1,109 +1,14 @@
-<!--
-Copyright (c) 2011 Sam Phippen <samphippen@googlemail.com>
- 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
- 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
- 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
---> 
+
 <html> 
 <head> 
-<title>Jeff Weisbein</title> 
+<title>Naresh</title> 
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="jquery.mCustomScrollbar.css">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-<style type="text/css"> 
-	body {
-		background-color: #000
-	}
-	#console {
-		font-family: courier, monospace;
-		color: #fff;
-		width:750px;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:100px;
-		font-size:14px;
-	}
-	a {
-		color: #0bc;
-		text-decoration: none;
-	}
-	#a {
-		color: #0f0;
-	}
-	#c {
-		color: #0bc;
-	}
-	#b {
-		color: #ff0096;
-	}
+<script type="text/javascript" src="typed.js"></script>
+<script type="text/javascript" src="my.js"></script>
+<script type="text/javascript" src="jquery.mCustomScrollbar.concat.min.js"></script>
 
-
-input {
-    color: #fff;
-    border: none;
-    background-color: transparent;
-}
-
-</style> 
-
-
-<script type="text/javascript">
-	$(function () {
-
-        function load_input()
-        {   
-            $("#console").append('<br><span id="a">naresh@codelancer</span>:<span id="b">~</span> <input type="text" name="command" id="command" autofocus>');
-        }
-    var cursor;
-    window.onload =  function () {
-
-        load_input();
-    	$('input').val("");
-        $('input').focus();
-        cursor = window.setInterval(function () {
-            if ($('#cursor').css('visibility') === 'visible') {
-                $('#cursor').css({
-                    visibility: 'hidden'
-                });
-            } else {
-                $('#cursor').css({
-                    visibility: 'visible'
-                });
-            }
-        }, 500);
-
-    };
-
-  $(document).keypress(function(e) {
-    if(e.which == 13) {
-        console.log($('#command').val());
-        load_input();
-    }
-});
-
-    $('input').blur(function () {
-        clearInterval(cursor);
-        $('#cursor').css({
-            visibility: 'visible'
-        });
-    });
-});
-
-
-</script>
 </head> 
 <body> 
 
