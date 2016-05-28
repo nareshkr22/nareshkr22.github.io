@@ -19,7 +19,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
+ 
 
 
 
@@ -178,7 +178,9 @@
 
                 if (self.contentType === 'html') {
                     // skip over html tags while typing
+
                     var curChar = curString.substr(curStrPos).charAt(0)
+                   
                     if (curChar === '<' || curChar === '&') {
                         var tag = '';
                         var endTag = '';
@@ -294,12 +296,14 @@
                 // ----- continue important stuff ----- //
                 // replace text with base text + typed characters
                 var nextString = curString.substr(0, curStrPos);
+
                 if (self.attr) {
                     self.el.attr(self.attr, nextString);
                 } else {
                     if (self.isInput) {
                         self.el.val(nextString);
                     } else if (self.contentType === 'html') {
+
                         self.el.html(nextString);
                     } else {
                         self.el.text(nextString);

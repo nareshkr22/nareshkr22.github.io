@@ -2,6 +2,7 @@ body {
 		background-color: #000
 	}
 	#console {
+		overflow-y: auto;
 		font-family: courier, monospace;
 		color: #fff;
 		width:750px;
