@@ -1,5 +1,6 @@
 body {
 		background-color: #000
+
 	}
 	#console {
 		overflow-y: auto;
@@ -24,7 +25,9 @@ body {
 	#b {
 		color: #ff0096;
 	}
-	
+table {
+	color: white;
+}
 
 
 input {
