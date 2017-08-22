@@ -219,6 +219,8 @@
                         self.timeout = setTimeout(function() {
                             self.backspace(curString, curStrPos);
                         }, self.backDelay);
+                         var objDiv = document.getElementById("console");
+                    objDiv.scrollTop = objDiv.scrollHeight;
                     } else {
 
                         /* call before functions if applicable */
@@ -244,6 +246,9 @@
                         curStrPos++;
                         // loop the function
                         self.typewrite(curString, curStrPos);
+                    
+                    var objDiv = document.getElementById("console");
+                    objDiv.scrollTop = objDiv.scrollHeight;
                     }
                     // end of character pause
                 }, charPause);
