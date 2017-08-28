@@ -83,7 +83,7 @@ $(function() {
             exist(indents);
         }
       } else {
-        indents.push("Sorry Please Type help to get command list");
+        indents.push("Sorry Please Type help to get command lisdst");
         exist(indents);
       }
     }
