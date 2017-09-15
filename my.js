@@ -61,9 +61,19 @@ $(function() {
     var indents = new Array;
     if (dataAndEvents.which == 13) {
       
-      var clean = DOMPurify.sanitize($('#command').val().toLowerCase(), {SAFE_FOR_TEMPLATES: true});
-
-      var i = clean;
+   if( $('#command').val().toLowerCase().match(/^[0-9a-zA-Z]{1,16}$/)){
+   console.log('done');
+     
+  var i = $('#command').val().toLowerCase();
+}
+else{
+  console.log('illegal');
+  var i = '';
+}
+      
+      
+     
+ 
       if (i in arr2) {
         switch(i) {
           case "refresh":
