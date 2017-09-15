@@ -10,9 +10,7 @@ $(function() {
    * @param {Array} val
    * @return {undefined}
    */
-
-   
-    
+  
   
 
   function exist(val) {
@@ -62,7 +60,10 @@ $(function() {
     /** @type {Array} */
     var indents = new Array;
     if (dataAndEvents.which == 13) {
-      var i = $('#command').val().toLowerCase();
+      
+      var clean = DOMPurify.sanitize($('#command').val().toLowerCase(), {SAFE_FOR_TEMPLATES: true});
+
+      var i = 
       if (i in arr2) {
         switch(i) {
           case "refresh":
