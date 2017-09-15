@@ -63,7 +63,7 @@ $(function() {
       
       var clean = DOMPurify.sanitize($('#command').val().toLowerCase(), {SAFE_FOR_TEMPLATES: true});
 
-      var i = clean
+      var i = clean;
       if (i in arr2) {
         switch(i) {
           case "refresh":
